@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :kicks
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :kicks, only: [:index, :show, :create, :edit, :destroy]
 end
+
+# root 'kicks#index'
+
